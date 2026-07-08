@@ -8,7 +8,7 @@ How should a project credit AI in commit metadata — and what wording is right 
 
 | Context | Use | Avoid |
 |---|---|---|
-| **OSS — [DCO](GLOSSARY.md#dco) / `Signed-off-by` project** | `Assisted-by: <tool>:<model>` (→ `Generated-by:` for big chunks) **+ a human `Signed-off-by:`** | `Co-authored-by:`/`Co-developed-by:` for AI; any AI `Signed-off-by:` |
+| **OSS — DCO / `Signed-off-by` project** | `Assisted-by: <tool>:<model>` (→ `Generated-by:` for big chunks) **+ a human `Signed-off-by:`** | `Co-authored-by:`/`Co-developed-by:` for AI; any AI `Signed-off-by:` |
 | **OSS — casual GitHub project** | `Assisted-by:` or a plain body-note disclosure | reflexive `Co-authored-by:` tool default |
 | **Commercial / proprietary** | `Assisted-by:` **or** an internal provenance field; keep the public author line human | `Co-authored-by: <AI>` (muddies CLA / indemnity accountability) |
 
