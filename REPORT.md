@@ -6,15 +6,19 @@ Ordered by the repository owner ([@heios](https://github.com/heios)); researched
 
 ---
 
-## 1. Executive summary
+## 1. TL;DR
 
-[`Co-authored-by:`](GLOSSARY.md#co-authored-by "GitHub convention crediting extra commit authors; it asserts authorship.") asserts **authorship**, and that is exactly the problem for AI. Under U.S. law an author must be human — AI-only output is not copyrightable and there is no legal "author" to co-attribute ([USCO](GLOSSARY.md#usco "U.S. Copyright Office.") 2023 guidance; [*Thaler v. Perlmutter*](GLOSSARY.md#thaler-v-perlmutter "Thaler v. Perlmutter — court ruling that a copyrightable work must be authored by a human."), [cert. denied](GLOSSARY.md#certiorari "Certiorari — the Supreme Court's discretionary review; 'cert. denied' leaves the lower ruling standing.") Mar 2026) — so `Co-authored-by: <AI>` names a status that does not legally exist [[05]](sources/05-copyright-and-legal.md). In [DCO](GLOSSARY.md#dco "Developer Certificate of Origin — a per-commit sign-off certifying you have the right to submit the code.")/[`Signed-off-by`](GLOSSARY.md#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation.") projects it is worse: co-authorship there carries a *certification of rights* that only an accountable human can make, which is why the Linux kernel's merged policy tags AI with **[`Assisted-by:`](GLOSSARY.md#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author.")** and rules that "AI agents MUST NOT add Signed-off-by tags" [[02]](sources/02-dco-signoff-and-authorship.md)[[04]](sources/04-project-policies-and-controversy.md). Neutral framings — `Assisted-by:` (light help) and [`Generated-by:`](GLOSSARY.md#generated-by "Provenance trailer noting AI produced substantial or whole parts of the change.") (substantial output) — record tool use honestly while keeping the human as sole author/signer, and they are the convergent open-source standard (kernel, Apache, OpenInfra, Mesa, QGIS) [[06]](sources/06-wording-options-catalog.md). Crucially, none of this is about literal contribution-graph pollution: every AI trailer uses a synthetic email that matches no account, so no phrasing inflates any human's green squares — the objection is authorship implication and log/accountability noise, not graph credit [[01]](sources/01-coauthored-by-trailer-mechanics.md).
-
-**Bottom line: drop `Co-authored-by:` for AI. Use `Assisted-by: <tool>:<model>` for open-source (escalate to `Generated-by:` when the AI wrote substantial chunks), keep a human `Signed-off-by:` where the project uses the DCO, and for commercial/proprietary code prefer `Assisted-by:` or an internal [provenance](GLOSSARY.md#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs.") field so the public author line stays human.** Always follow the specific project's policy if it has one — a few projects (Kubernetes) ban trailers entirely and want prose disclosure instead.
+**Drop [`Co-authored-by:`](GLOSSARY.md#co-authored-by "GitHub convention crediting extra commit authors; it asserts authorship.") for AI. Use `Assisted-by: <tool>:<model>` for open-source (escalate to [`Generated-by:`](GLOSSARY.md#generated-by "Provenance trailer noting AI produced substantial or whole parts of the change.") when the AI wrote substantial chunks), keep a human [`Signed-off-by:`](GLOSSARY.md#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation.") where the project uses the DCO, and for commercial/proprietary code prefer [`Assisted-by:`](GLOSSARY.md#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author.") or an internal [provenance](GLOSSARY.md#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs.") field so the public author line stays human.** Always follow the specific project's policy if it has one — a few projects (Kubernetes) ban trailers entirely and want prose disclosure instead.
 
 ---
 
-## 2. Why "co-author" is contested
+## 2. Executive summary
+
+`Co-authored-by:` asserts **authorship**, and that is exactly the problem for AI. Under U.S. law an author must be human — AI-only output is not copyrightable and there is no legal "author" to co-attribute ([USCO](GLOSSARY.md#usco "U.S. Copyright Office.") 2023 guidance; [*Thaler v. Perlmutter*](GLOSSARY.md#thaler-v-perlmutter "Thaler v. Perlmutter — court ruling that a copyrightable work must be authored by a human."), [cert. denied](GLOSSARY.md#certiorari "Certiorari — the Supreme Court's discretionary review; 'cert. denied' leaves the lower ruling standing.") Mar 2026) — so `Co-authored-by: <AI>` names a status that does not legally exist [[05]](sources/05-copyright-and-legal.md). In [DCO](GLOSSARY.md#dco "Developer Certificate of Origin — a per-commit sign-off certifying you have the right to submit the code.")/`Signed-off-by` projects it is worse: co-authorship there carries a *certification of rights* that only an accountable human can make, which is why the Linux kernel's merged policy tags AI with **`Assisted-by:`** and rules that "AI agents MUST NOT add Signed-off-by tags" [[02]](sources/02-dco-signoff-and-authorship.md)[[04]](sources/04-project-policies-and-controversy.md). Neutral framings — `Assisted-by:` (light help) and `Generated-by:` (substantial output) — record tool use honestly while keeping the human as sole author/signer, and they are the convergent open-source standard (kernel, Apache, OpenInfra, Mesa, QGIS) [[06]](sources/06-wording-options-catalog.md). Crucially, none of this is about literal contribution-graph pollution: every AI trailer uses a synthetic email that matches no account, so no phrasing inflates any human's green squares — the objection is authorship implication and log/accountability noise, not graph credit [[01]](sources/01-coauthored-by-trailer-mechanics.md).
+
+---
+
+## 3. Why "co-author" is contested
 
 Three independent lines converge on the same conclusion — the AI is a *tool*, not an *author* — and each is anchored in primary text:
 
@@ -26,7 +30,7 @@ The tension in one line: the *coding tools* (Claude Code, Copilot, Cursor, aider
 
 ---
 
-## 3. Wording-options catalog
+## 4. Wording-options catalog
 
 Two facts govern every row: **(a)** any hyphenated `Token: value` line is an equally valid, greppable [git trailer](GLOSSARY.md#git-trailer "Git's generic 'Token: value' metadata lines at the end of a commit message.") (tokens may contain hyphens, not spaces) — git assigns none of them special meaning; **(b)** the GitHub contribution-graph effect is identical for all of them and driven only by email, so no phrasing inflates a human's graph, and `Co-authored-by:` is the *only* token GitHub renders as a linked co-author chip [[01]](sources/01-coauthored-by-trailer-mechanics.md)[[06]](sources/06-wording-options-catalog.md).
 
@@ -50,7 +54,7 @@ Two facts govern every row: **(a)** any hyphenated `Token: value` line is an equ
 
 ---
 
-## 4. Recommendation matrix
+## 5. Recommendation matrix
 
 Opinionated; one primary recommendation per row. This section is **analysis** synthesized from the sourced facts above.
 
@@ -62,7 +66,7 @@ Opinionated; one primary recommendation per row. This section is **analysis** sy
 
 ---
 
-## 5. What I'd actually put in a commit
+## 6. What I'd actually put in a commit
 
 **Good default trailer (OSS, kernel-style — light AI help, human certifies):**
 
@@ -123,4 +127,4 @@ The load-bearing facts rest on *primary, public* sources: git's reference manual
 - **Human role:** direction, scope, and review. This is **AI-generated content with human oversight** — not a human-authored document.
 - **Published:** 2026-07-08 12:05 UTC+00:00.
 
-This report is published deliberately as a working example of the practice it recommends: its own commits carry a `Generated-by: Claude Opus 4.8 (claude-opus-4-8)` trailer rather than a `Co-authored-by:` line — because the report is substantially machine-generated, and no AI can be a legal author or a sign-off party. See [§5, What I'd actually put in a commit](#5-what-id-actually-put-in-a-commit) and the [glossary](GLOSSARY.md).
+This report is published deliberately as a working example of the practice it recommends: its own commits carry a `Generated-by: Claude Opus 4.8 (claude-opus-4-8)` trailer rather than a `Co-authored-by:` line — because the report is substantially machine-generated, and no AI can be a legal author or a sign-off party. See [§6, What I'd actually put in a commit](#6-what-id-actually-put-in-a-commit) and the [glossary](GLOSSARY.md).
