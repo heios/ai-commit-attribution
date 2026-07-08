@@ -102,11 +102,11 @@ Primary source: <https://www.apache.org/legal/generative-tooling.html>
 
 The Linux kernel's standardized credit and review trailers — some carry a factual claim, others are pure credit:
 
-- **`Acked-by`** — a stakeholder (often the maintainer of an affected subsystem) who didn't necessarily review the patch in detail signals they're content for it to be applied — typically when it's merged through a different tree.
-- **`Reviewed-by`** — a reviewer who examined the patch vouches for it under the kernel's formal *Reviewer's statement of oversight* (an appropriate change "without any obvious bugs"). A stronger technical endorsement than `Acked-by`.
-- **`Tested-by`** — the named person applied the patch and confirmed it works, or has the claimed effect, in some environment.
-- **`Reported-by`** — credits whoever found and reported the bug the patch fixes (ask permission first if the report was private). Pure credit, no technical claim.
-- **`Suggested-by`** — credits whoever proposed the idea or approach behind the patch.
+- **`Acked-by`** ("Acknowledged by") — a stakeholder (often the maintainer of an affected subsystem) who didn't necessarily review the patch in detail signals they're content for it to be applied — typically when it's merged through a different tree.
+- **`Reviewed-by`** ("Reviewed by") — a reviewer who examined the patch vouches for it under the kernel's formal *Reviewer's statement of oversight* (an appropriate change "without any obvious bugs"). A stronger technical endorsement than `Acked-by`.
+- **`Tested-by`** ("Tested by") — the named person applied the patch and confirmed it works, or has the claimed effect, in some environment.
+- **`Reported-by`** ("Reported by") — credits whoever found and reported the bug the patch fixes (ask permission first if the report was private). Pure credit, no technical claim.
+- **`Suggested-by`** ("Suggested by") — credits whoever proposed the idea or approach behind the patch.
 
 *In this report:* [Assisted-by](#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author.") is deliberately modeled on these non-authorial tags, which is why it records involvement without certifying anything the way [Signed-off-by](#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation.") does.
 
