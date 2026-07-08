@@ -90,7 +90,7 @@ Primary source: <https://docs.kernel.org/process/coding-assistants.html>
 
 ### Generated-by
 
-A commit trailer recording that AI produced substantial or whole chunks of the change — a [provenance](#software-provenance "Where and how software was produced, recorded in build attestations and SBOMs. See glossary.") label, not an author claim.
+A commit trailer recording that AI produced substantial or whole chunks of the change — a [provenance](#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs. See glossary.") label, not an author claim.
 
 *In this report:* it's the recommended escalation from Assisted-by for heavier AI output; Apache recommends it and OpenInfra uses it for substantial AI help.
 
@@ -206,7 +206,7 @@ Primary source: <https://www.copyright.gov/ai/>
 
 ### Thaler v. Perlmutter
 
-A D.C. Circuit case (decided 2025; [cert. denied](#certiorari "The Supreme Court's discretionary review; 'cert. denied' leaves the lower ruling standing. See glossary.") 2026) holding that the Copyright Act requires a work to be authored in the first instance by a human being, so a machine cannot be an author.
+A D.C. Circuit case (decided 2025; [cert. denied](#certiorari "Certiorari — the Supreme Court's discretionary review; 'cert. denied' leaves the lower ruling standing. See glossary.") 2026) holding that the Copyright Act requires a work to be authored in the first instance by a human being, so a machine cannot be an author.
 
 *In this report:* it's the controlling court decision behind the 'no legal AI author to co-attribute' conclusion.
 
@@ -218,7 +218,7 @@ Primary source: <https://media.cadc.uscourts.gov/opinions/docs/2025/03/23-5233.p
 
 Certiorari is the Supreme Court's discretionary agreement to hear an appeal; 'cert. denied' means the Court declined, leaving the lower court's ruling as controlling law.
 
-*In this report:* the Supreme Court denied cert in [Thaler](#thaler-v-perlmutter "Court ruling that a copyrightable work must be authored by a human. See glossary.") (March 2026), which is what makes the human-authorship holding stick.
+*In this report:* the Supreme Court denied cert in [Thaler](#thaler-v-perlmutter "Thaler v. Perlmutter — court ruling that a copyrightable work must be authored by a human. See glossary.") (March 2026), which is what makes the human-authorship holding stick.
 
 Primary source: <https://www.supremecourt.gov/docket/docket.aspx>
 
