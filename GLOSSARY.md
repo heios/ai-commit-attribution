@@ -100,7 +100,13 @@ Primary source: <https://www.apache.org/legal/generative-tooling.html>
 
 ### kernel credit trailers
 
-The Linux kernel's standardized credit/review trailers: Acked-by (acknowledges acceptance), Reviewed-by (formal review per the Reviewer's Statement), Tested-by (verified it works), and Reported-by / Suggested-by (pure credit for finding a bug or suggesting an idea). Some carry a factual claim; others are just credit.
+The Linux kernel's standardized credit and review trailers — some carry a factual claim, others are pure credit:
+
+- **`Acked-by`** — a stakeholder (often the maintainer of an affected subsystem) who didn't necessarily review the patch in detail signals they're content for it to be applied — typically when it's merged through a different tree.
+- **`Reviewed-by`** — a reviewer who examined the patch vouches for it under the kernel's formal *Reviewer's statement of oversight* (an appropriate change "without any obvious bugs"). A stronger technical endorsement than `Acked-by`.
+- **`Tested-by`** — the named person applied the patch and confirmed it works, or has the claimed effect, in some environment.
+- **`Reported-by`** — credits whoever found and reported the bug the patch fixes (ask permission first if the report was private). Pure credit, no technical claim.
+- **`Suggested-by`** — credits whoever proposed the idea or approach behind the patch.
 
 *In this report:* Assisted-by is deliberately modeled on these non-authorial tags, which is why it records involvement without certifying anything the way Signed-off-by does.
 
