@@ -10,7 +10,7 @@ Ordered roughly by how central each term is to the report's reasoning.
 
 ### DCO
 
-**Developer Certificate of Origin.** A short, standardized statement a contributor affirms — by adding a Signed-off-by line to a commit — certifying that they wrote the code or otherwise have the right to submit it under the project's open-source license. It's a lightweight, per-commit alternative to signing a full legal agreement.
+**Developer Certificate of Origin.** A short, standardized statement a contributor affirms — by adding a [Signed-off-by](#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation. See glossary.") line to a commit — certifying that they wrote the code or otherwise have the right to submit it under the project's open-source license. It's a lightweight, per-commit alternative to signing a full legal agreement.
 
 *In this report:* the DCO is the legal instrument behind Signed-off-by, and the core argument is that an AI can't make this certification because it isn't an accountable legal person.
 
@@ -20,7 +20,7 @@ Primary source: <https://developercertificate.org/>
 
 ### Signed-off-by
 
-A git commit trailer naming a person; in DCO projects, adding the line IS the act of certifying the Developer Certificate of Origin for that patch — a first-person legal attestation by a named, accountable human.
+A git commit trailer naming a person; in [DCO](#dco "Developer Certificate of Origin — a per-commit sign-off certifying you have the right to submit the code. See glossary.") projects, adding the line IS the act of certifying the Developer Certificate of Origin for that patch — a first-person legal attestation by a named, accountable human.
 
 *In this report:* it's the certification line an AI cannot supply, and the Linux kernel rule that 'AI agents MUST NOT add Signed-off-by tags' is central.
 
@@ -60,7 +60,7 @@ Primary source: <https://www.apache.org/licenses/contributor-agreements.html>
 
 ### ICLA
 
-**Individual CLA.** The individual (as opposed to corporate) version of a Contributor License Agreement, in which a person represents that each contribution is their own original creation.
+**Individual [CLA](#cla "Contributor License Agreement — a signed grant of rights over your contribution. See glossary.").** The individual (as opposed to corporate) version of a Contributor License Agreement, in which a person represents that each contribution is their own original creation.
 
 *In this report:* it cites Apache's ICLA §5 ('Your original creation') to show contribution agreements are anchored on human original authorship an AI can't satisfy.
 
@@ -72,7 +72,7 @@ Primary source: <https://www.apache.org/licenses/icla.pdf>
 
 Git's generic machinery for 'Token: value' lines (email-header style) in a blank-line-separated block at the end of a commit message; git-interpret-trailers adds or parses them, and git itself assigns them no special meaning — they're just plain, greppable metadata.
 
-*In this report:* it's the foundation of the whole analysis — every attribution phrasing (Co-authored-by, Assisted-by, and the rest) is just an ordinary trailer to git; only GitHub and projects layer extra meaning on top.
+*In this report:* it's the foundation of the whole analysis — every attribution phrasing ([Co-authored-by](#co-authored-by "GitHub convention crediting extra commit authors; it asserts authorship. See glossary."), [Assisted-by](#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author. See glossary."), and the rest) is just an ordinary trailer to git; only GitHub and projects layer extra meaning on top.
 
 Primary source: <https://git-scm.com/docs/git-interpret-trailers>
 
@@ -90,7 +90,7 @@ Primary source: <https://docs.kernel.org/process/coding-assistants.html>
 
 ### Generated-by
 
-A commit trailer recording that AI produced substantial or whole chunks of the change — a provenance label, not an author claim.
+A commit trailer recording that AI produced substantial or whole chunks of the change — a [provenance](#software-provenance "Where and how software was produced, recorded in build attestations and SBOMs. See glossary.") label, not an author claim.
 
 *In this report:* it's the recommended escalation from Assisted-by for heavier AI output; Apache recommends it and OpenInfra uses it for substantial AI help.
 
@@ -152,7 +152,7 @@ Primary source: <https://slsa.dev/spec/v1.0/>
 
 Software Bill of Materials — a formal, machine-readable inventory of the components and provenance that make up a piece of software.
 
-*In this report:* it argues a parseable Assisted-by/Generated-by trailer is better SBOM-style provenance than a fake AI co-author line.
+*In this report:* it argues a parseable Assisted-by/[Generated-by](#generated-by "Provenance trailer noting AI produced substantial or whole parts of the change. See glossary.") trailer is better SBOM-style provenance than a fake AI co-author line.
 
 Primary source: <https://www.cisa.gov/resources-tools/resources/2025-minimum-elements-software-bill-materials-sbom>
 
@@ -200,7 +200,7 @@ Primary source: <https://www.copyright.gov/ai/>
 
 ### Thaler v. Perlmutter
 
-A D.C. Circuit case (decided 2025; cert. denied 2026) holding that the Copyright Act requires a work to be authored in the first instance by a human being, so a machine cannot be an author.
+A D.C. Circuit case (decided 2025; [cert. denied](#certiorari "The Supreme Court's discretionary review; 'cert. denied' leaves the lower ruling standing. See glossary.") 2026) holding that the Copyright Act requires a work to be authored in the first instance by a human being, so a machine cannot be an author.
 
 *In this report:* it's the controlling court decision behind the 'no legal AI author to co-attribute' conclusion.
 
@@ -212,7 +212,7 @@ Primary source: <https://media.cadc.uscourts.gov/opinions/docs/2025/03/23-5233.p
 
 Certiorari is the Supreme Court's discretionary agreement to hear an appeal; 'cert. denied' means the Court declined, leaving the lower court's ruling as controlling law.
 
-*In this report:* the Supreme Court denied cert in Thaler (March 2026), which is what makes the human-authorship holding stick.
+*In this report:* the Supreme Court denied cert in [Thaler](#thaler-v-perlmutter "Court ruling that a copyrightable work must be authored by a human. See glossary.") (March 2026), which is what makes the human-authorship holding stick.
 
 Primary source: <https://www.supremecourt.gov/docket/docket.aspx>
 
