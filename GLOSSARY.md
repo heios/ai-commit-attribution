@@ -1,8 +1,10 @@
 # Glossary
 
-Plain-language definitions of the less-common terms used in **[REPORT.md](REPORT.md)** — the git-trailer mechanics, open-source governance instruments, software-provenance specs, and copyright case law behind the *credit AI as a tool, not a co-author* argument. Everyday git/GitHub basics (commit, branch, pull request, merge, the contribution graph) are left out on purpose.
+Plain-language definitions of the less-common terms used in the report **and its source notes** — the git-trailer mechanics, open-source governance instruments, software-provenance specs, and copyright case law behind the *credit AI as a tool, not a co-author* argument. Everyday git/GitHub basics (commit, branch, pull request, merge, the contribution graph) are left out on purpose.
 
 Ordered roughly by how central each term is to the report's reasoning.
+
+**Contents:** [DCO](#dco) · [Signed-off-by](#signed-off-by) · [Co-authored-by](#co-authored-by) · [Co-developed-by](#co-developed-by) · [CLA](#cla) · [ICLA](#icla) · [git trailer](#git-trailer) · [Assisted-by](#assisted-by) · [Generated-by](#generated-by) · [kernel credit trailers](#kernel-credit-trailers) · [DCO App](#dco-app) · [noreply](#noreply) · [software provenance](#software-provenance) · [SLSA](#slsa) · [SBOM](#sbom) · [AI slop](#ai-slop) · [tainted code](#tainted-code) · [IP indemnity](#ip-indemnity) · [USCO](#usco) · [Thaler v. Perlmutter](#thaler-v-perlmutter) · [certiorari](#certiorari)
 
 ---
 
@@ -73,16 +75,6 @@ Git's generic machinery for 'Token: value' lines (email-header style) in a blank
 *In this report:* it's the foundation of the whole analysis — every attribution phrasing (Co-authored-by, Assisted-by, and the rest) is just an ordinary trailer to git; only GitHub and projects layer extra meaning on top.
 
 Primary source: <https://git-scm.com/docs/git-interpret-trailers>
-
----
-
-### Conventional Commits
-
-A specification for structuring commit-message subject lines with a type prefix like feat:, fix:, or chore: so history is machine-parseable and can drive changelogs and version bumps.
-
-*In this report:* it's the reference point for 'structured, greppable commit metadata' — a useful contrast to trailers, which developers sometimes conflate with it.
-
-Primary source: <https://www.conventionalcommits.org/en/v1.0.0/>
 
 ---
 
@@ -166,16 +158,6 @@ Primary source: <https://www.cisa.gov/resources-tools/resources/2025-minimum-ele
 
 ---
 
-### SPDX
-
-Software Package Data Exchange — an ISO-standard open format and license-identifier vocabulary for expressing SBOM data plus license and copyright metadata. Developers know its license IDs (MIT, Apache-2.0) more than the full spec.
-
-*In this report:* it's part of the supply-chain/provenance ecosystem a structured AI-tool trailer could serve.
-
-Primary source: <https://spdx.dev/use/specifications/>
-
----
-
 ### AI slop
 
 Low-quality, unverified AI-generated content submitted as if it were genuine work — for example, hallucinated bug-bounty reports that waste maintainers' time.
@@ -216,36 +198,6 @@ Primary source: <https://www.copyright.gov/ai/>
 
 ---
 
-### work made for hire
-
-A U.S. copyright doctrine where an employer or commissioning party — not the individual who created the work — is legally treated as the author and owner.
-
-*In this report:* it's one of the legal 'author' concepts that gets muddied when an AI is labeled a co-author instead of the human or company.
-
-Primary source: <https://www.copyright.gov/circs/circ30.pdf>
-
----
-
-### joint work
-
-A U.S. copyright term for a work prepared by two or more authors intending their contributions to merge into a unitary whole, giving each co-author a shared ownership interest.
-
-*In this report:* it's the legal reality 'co-author' implies — a status an AI cannot hold, making 'Co-authored-by: <AI>' a claim to a relationship that doesn't exist.
-
-Primary source: <https://www.copyright.gov/title17/92chap1.html#101>
-
----
-
-### public domain
-
-The status of material that copyright does not protect and anyone may freely use — here, purely AI-generated output that has no human author and so cannot be owned.
-
-*In this report:* it's the consequence that makes a false AI co-author line risky — it could read as conceding part of the code is un-owned.
-
-Primary source: <https://www.copyright.gov/help/faq/faq-definitions.html>
-
----
-
 ### Thaler v. Perlmutter
 
 A D.C. Circuit case (decided 2025; cert. denied 2026) holding that the Copyright Act requires a work to be authored in the first instance by a human being, so a machine cannot be an author.
@@ -258,21 +210,11 @@ Primary source: <https://media.cadc.uscourts.gov/opinions/docs/2025/03/23-5233.p
 
 ### certiorari
 
-The Supreme Court's discretionary agreement to hear an appeal; 'cert. denied' means the Court declined, leaving the lower court's ruling as controlling law.
+Certiorari is the Supreme Court's discretionary agreement to hear an appeal; 'cert. denied' means the Court declined, leaving the lower court's ruling as controlling law.
 
 *In this report:* the Supreme Court denied cert in Thaler (March 2026), which is what makes the human-authorship holding stick.
 
 Primary source: <https://www.supremecourt.gov/docket/docket.aspx>
-
----
-
-### Naruto v. Slater
-
-The 'monkey selfie' case (9th Cir. 2018, 888 F.3d 418) holding that a non-human — a macaque — has no standing to hold or sue over a copyright.
-
-*In this report:* it's the go-to precedent for 'non-humans cannot be authors,' extended by analogy from animals to AI.
-
-Primary source: <https://cdn.ca9.uscourts.gov/datastore/opinions/2018/04/23/16-15469.pdf>
 
 ---
 
