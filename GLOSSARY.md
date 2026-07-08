@@ -40,7 +40,7 @@ Primary source: <https://docs.github.com/en/pull-requests/committing-changes-to-
 
 ### Co-developed-by
 
-A Linux-kernel commit trailer marking genuine shared authorship of a patch, which the kernel requires to be immediately followed by that co-author's own Signed-off-by line.
+A Linux-kernel commit trailer marking genuine shared authorship of a patch, which the kernel requires to be immediately followed by that co-author's own [Signed-off-by](#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation. See glossary.") line.
 
 *In this report:* it's semantically broken for AI (the AI can't supply the mandatory paired sign-off), so the kernel rejected it and Kubernetes bans it by name.
 
@@ -50,7 +50,7 @@ Primary source: <https://docs.kernel.org/process/submitting-patches.html>
 
 ### CLA
 
-**Contributor License Agreement.** A legal agreement a contributor signs granting a project (or its foundation) rights to use their contribution, typically requiring them to represent that they have the authority to grant those rights. It's heavier-weight than a one-line DCO sign-off.
+**Contributor License Agreement.** A legal agreement a contributor signs granting a project (or its foundation) rights to use their contribution, typically requiring them to represent that they have the authority to grant those rights. It's heavier-weight than a one-line [DCO](#dco "Developer Certificate of Origin — a per-commit sign-off certifying you have the right to submit the code. See glossary.") sign-off.
 
 *In this report:* like the DCO, a CLA assumes a human legal person who can make representations — something an AI can't do — reinforcing the case for keeping the author line human.
 
@@ -82,7 +82,7 @@ Primary source: <https://git-scm.com/docs/git-interpret-trailers>
 
 A commit trailer that credits an AI tool as a mere assistant (format 'Assisted-by: AGENT:MODEL [tools]') while keeping the human as sole author and signer. Adopted by the Linux kernel and other foundations.
 
-*In this report:* it's the headline recommendation — modeled on non-authorial kernel credit trailers, so it records the AI's help without triggering the DCO certification problem.
+*In this report:* it's the headline recommendation — modeled on non-authorial kernel credit trailers, so it records the AI's help without triggering the [DCO](#dco "Developer Certificate of Origin — a per-commit sign-off certifying you have the right to submit the code. See glossary.") certification problem.
 
 Primary source: <https://docs.kernel.org/process/coding-assistants.html>
 
@@ -92,7 +92,7 @@ Primary source: <https://docs.kernel.org/process/coding-assistants.html>
 
 A commit trailer recording that AI produced substantial or whole chunks of the change — a [provenance](#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs. See glossary.") label, not an author claim.
 
-*In this report:* it's the recommended escalation from Assisted-by for heavier AI output; Apache recommends it and OpenInfra uses it for substantial AI help.
+*In this report:* it's the recommended escalation from [Assisted-by](#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author. See glossary.") for heavier AI output; Apache recommends it and OpenInfra uses it for substantial AI help.
 
 Primary source: <https://www.apache.org/legal/generative-tooling.html>
 
@@ -108,7 +108,7 @@ The Linux kernel's standardized credit and review trailers — some carry a fact
 - **`Reported-by`** — credits whoever found and reported the bug the patch fixes (ask permission first if the report was private). Pure credit, no technical claim.
 - **`Suggested-by`** — credits whoever proposed the idea or approach behind the patch.
 
-*In this report:* Assisted-by is deliberately modeled on these non-authorial tags, which is why it records involvement without certifying anything the way Signed-off-by does.
+*In this report:* [Assisted-by](#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author. See glossary.") is deliberately modeled on these non-authorial tags, which is why it records involvement without certifying anything the way [Signed-off-by](#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation. See glossary.") does.
 
 Primary source: <https://docs.kernel.org/process/submitting-patches.html>
 
@@ -116,7 +116,7 @@ Primary source: <https://docs.kernel.org/process/submitting-patches.html>
 
 ### DCO App
 
-A Probot-based GitHub App that enforces the DCO by failing a pull request's status check unless every commit has a valid Signed-off-by line matching the commit author's email, blocking the PR otherwise.
+A Probot-based GitHub App that enforces the [DCO](#dco "Developer Certificate of Origin — a per-commit sign-off certifying you have the right to submit the code. See glossary.") by failing a pull request's status check unless every commit has a valid [Signed-off-by](#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation. See glossary.") line matching the commit author's email, blocking the PR otherwise.
 
 *In this report:* it mechanically ties sign-off to an accountable human account, so there's no path for an AI to satisfy the DCO check on its own behalf.
 
@@ -146,7 +146,7 @@ Primary source: <https://slsa.dev/spec/v1.0/provenance>
 
 ### SLSA
 
-Supply-chain Levels for Software Artifacts — an OpenSSF framework of graded security levels and signed build-provenance attestations describing how an artifact was produced.
+Supply-chain Levels for Software Artifacts — an OpenSSF framework of graded security levels and signed build-[provenance](#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs. See glossary.") attestations describing how an artifact was produced.
 
 *In this report:* it's the provenance framework a machine-readable AI-tool trailer naturally feeds, unlike a human co-author line.
 
@@ -156,9 +156,9 @@ Primary source: <https://slsa.dev/spec/v1.0/>
 
 ### SBOM
 
-Software Bill of Materials — a formal, machine-readable inventory of the components and provenance that make up a piece of software.
+Software Bill of Materials — a formal, machine-readable inventory of the components and [provenance](#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs. See glossary.") that make up a piece of software.
 
-*In this report:* it argues a parseable Assisted-by/[Generated-by](#generated-by "Provenance trailer noting AI produced substantial or whole parts of the change. See glossary.") trailer is better SBOM-style provenance than a fake AI co-author line.
+*In this report:* it argues a parseable [Assisted-by](#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author. See glossary.")/[Generated-by](#generated-by "Provenance trailer noting AI produced substantial or whole parts of the change. See glossary.") trailer is better SBOM-style provenance than a fake AI co-author line.
 
 Primary source: <https://www.cisa.gov/resources-tools/resources/2025-minimum-elements-software-bill-materials-sbom>
 
@@ -176,7 +176,7 @@ Primary source: <https://daniel.haxx.se/blog/2025/07/14/death-by-a-thousand-slop
 
 ### tainted code
 
-Code of uncertain or encumbered copyright/license origin that a project treats as unsafe to include until its provenance is cleared; NetBSD presumes LLM-generated code to be tainted.
+Code of uncertain or encumbered copyright/license origin that a project treats as unsafe to include until its [provenance](#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs. See glossary.") is cleared; NetBSD presumes LLM-generated code to be tainted.
 
 *In this report:* it's NetBSD's framing that treats AI output as a licensing-hygiene hazard rather than an authorship question.
 
