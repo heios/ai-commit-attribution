@@ -2,7 +2,7 @@
 
 Ordered by the repository owner ([@heios](https://github.com/heios)); researched and written by an automated Claude research workflow. Published 2026-07-08 12:05 UTC+00:00.
 
-> **How to read this.** The recommendations come first. For how far to trust each claim, see [Source confidence](#source-confidence); for the cited primary-source notes behind every claim, see [Supporting documents](#supporting-documents); for who made this and how, see [Provenance](#provenance) — all three are at the end. Uncommon terms ([DCO](GLOSSARY.md#dco), CLA, SLSA, …) are defined in the [glossary](GLOSSARY.md).
+> **How to read this.** The recommendations come first. For how far to trust each claim, see [Source confidence](#source-confidence); for the cited primary-source notes behind every claim, see [Supporting documents](#supporting-documents); for who made this and how, see [Provenance](#provenance) — all three are at the end. Uncommon terms (DCO, CLA, SLSA, …) are defined in the [glossary](GLOSSARY.md).
 
 ---
 
