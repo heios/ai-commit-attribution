@@ -4,13 +4,13 @@ Plain-language definitions of the less-common terms used in the report **and its
 
 Ordered roughly by how central each term is to the report's reasoning.
 
-**Contents:** [DCO](#dco) · [Signed-off-by](#signed-off-by) · [Co-authored-by](#co-authored-by) · [Co-developed-by](#co-developed-by) · [CLA](#cla) · [ICLA](#icla) · [git trailer](#git-trailer) · [Assisted-by](#assisted-by) · [Generated-by](#generated-by) · [kernel credit trailers](#kernel-credit-trailers) · [DCO App](#dco-app) · [noreply](#noreply) · [software provenance](#software-provenance) · [SLSA](#slsa) · [SBOM](#sbom) · [AI slop](#ai-slop) · [tainted code](#tainted-code) · [IP indemnity](#ip-indemnity) · [USCO](#usco) · [Thaler v. Perlmutter](#thaler-v-perlmutter) · [certiorari](#certiorari)
+**Contents:** [DCO](#dco) · [Signed-off-by](#signed-off-by) · [Co-authored-by](#co-authored-by) · [Co-developed-by](#co-developed-by) · [CLA](#cla) · [ICLA](#icla) · [git trailer](#git-trailer) · [Assisted-by](#assisted-by) · [Generated-by](#generated-by) · [kernel credit trailers](#kernel-credit-trailers) · [DCO App](#dco-app) · [noreply](#noreply) · [software provenance](#software-provenance) · [SLSA](#slsa) · [SBOM](#sbom) · [tainted code](#tainted-code) · [IP indemnity](#ip-indemnity) · [USCO](#usco) · [Thaler v. Perlmutter](#thaler-v-perlmutter) · [certiorari](#certiorari)
 
 ---
 
 ### DCO
 
-**Developer Certificate of Origin.** A short, standardized statement a contributor affirms — by adding a [Signed-off-by](#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation. See glossary.") line to a commit — certifying that they wrote the code or otherwise have the right to submit it under the project's open-source license. It's a lightweight, per-commit alternative to signing a full legal agreement.
+**Developer Certificate of Origin.** A short, standardized statement a contributor affirms — by adding a [Signed-off-by](#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation.") line to a commit — certifying that they wrote the code or otherwise have the right to submit it under the project's open-source license. It's a lightweight, per-commit alternative to signing a full legal agreement.
 
 *In this report:* the DCO is the legal instrument behind Signed-off-by, and the core argument is that an AI can't make this certification because it isn't an accountable legal person.
 
@@ -20,7 +20,7 @@ Primary source: <https://developercertificate.org/>
 
 ### Signed-off-by
 
-A git commit trailer naming a person; in [DCO](#dco "Developer Certificate of Origin — a per-commit sign-off certifying you have the right to submit the code. See glossary.") projects, adding the line IS the act of certifying the Developer Certificate of Origin for that patch — a first-person legal attestation by a named, accountable human.
+A git commit trailer naming a person; in [DCO](#dco "Developer Certificate of Origin — a per-commit sign-off certifying you have the right to submit the code.") projects, adding the line IS the act of certifying the Developer Certificate of Origin for that patch — a first-person legal attestation by a named, accountable human.
 
 *In this report:* it's the certification line an AI cannot supply, and the Linux kernel rule that 'AI agents MUST NOT add Signed-off-by tags' is central.
 
@@ -40,7 +40,7 @@ Primary source: <https://docs.github.com/en/pull-requests/committing-changes-to-
 
 ### Co-developed-by
 
-A Linux-kernel commit trailer marking genuine shared authorship of a patch, which the kernel requires to be immediately followed by that co-author's own [Signed-off-by](#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation. See glossary.") line.
+A Linux-kernel commit trailer marking genuine shared authorship of a patch, which the kernel requires to be immediately followed by that co-author's own [Signed-off-by](#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation.") line.
 
 *In this report:* it's semantically broken for AI (the AI can't supply the mandatory paired sign-off), so the kernel rejected it and Kubernetes bans it by name.
 
@@ -50,7 +50,7 @@ Primary source: <https://docs.kernel.org/process/submitting-patches.html>
 
 ### CLA
 
-**Contributor License Agreement.** A legal agreement a contributor signs granting a project (or its foundation) rights to use their contribution, typically requiring them to represent that they have the authority to grant those rights. It's heavier-weight than a one-line [DCO](#dco "Developer Certificate of Origin — a per-commit sign-off certifying you have the right to submit the code. See glossary.") sign-off.
+**Contributor License Agreement.** A legal agreement a contributor signs granting a project (or its foundation) rights to use their contribution, typically requiring them to represent that they have the authority to grant those rights. It's heavier-weight than a one-line [DCO](#dco "Developer Certificate of Origin — a per-commit sign-off certifying you have the right to submit the code.") sign-off.
 
 *In this report:* like the DCO, a CLA assumes a human legal person who can make representations — something an AI can't do — reinforcing the case for keeping the author line human.
 
@@ -60,7 +60,7 @@ Primary source: <https://www.apache.org/licenses/contributor-agreements.html>
 
 ### ICLA
 
-**Individual [CLA](#cla "Contributor License Agreement — a signed grant of rights over your contribution. See glossary.").** The individual (as opposed to corporate) version of a Contributor License Agreement, in which a person represents that each contribution is their own original creation.
+**Individual [CLA](#cla "Contributor License Agreement — a signed grant of rights over your contribution.").** The individual (as opposed to corporate) version of a Contributor License Agreement, in which a person represents that each contribution is their own original creation.
 
 *In this report:* it cites Apache's ICLA §5 ('Your original creation') to show contribution agreements are anchored on human original authorship an AI can't satisfy.
 
@@ -72,7 +72,7 @@ Primary source: <https://www.apache.org/licenses/icla.pdf>
 
 Git's generic machinery for 'Token: value' lines (email-header style) in a blank-line-separated block at the end of a commit message; git-interpret-trailers adds or parses them, and git itself assigns them no special meaning — they're just plain, greppable metadata.
 
-*In this report:* it's the foundation of the whole analysis — every attribution phrasing ([Co-authored-by](#co-authored-by "GitHub convention crediting extra commit authors; it asserts authorship. See glossary."), [Assisted-by](#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author. See glossary."), and the rest) is just an ordinary trailer to git; only GitHub and projects layer extra meaning on top.
+*In this report:* it's the foundation of the whole analysis — every attribution phrasing ([Co-authored-by](#co-authored-by "GitHub convention crediting extra commit authors; it asserts authorship."), [Assisted-by](#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author."), and the rest) is just an ordinary trailer to git; only GitHub and projects layer extra meaning on top.
 
 Primary source: <https://git-scm.com/docs/git-interpret-trailers>
 
@@ -82,7 +82,7 @@ Primary source: <https://git-scm.com/docs/git-interpret-trailers>
 
 A commit trailer that credits an AI tool as a mere assistant (format 'Assisted-by: AGENT:MODEL [tools]') while keeping the human as sole author and signer. Adopted by the Linux kernel and other foundations.
 
-*In this report:* it's the headline recommendation — modeled on non-authorial kernel credit trailers, so it records the AI's help without triggering the [DCO](#dco "Developer Certificate of Origin — a per-commit sign-off certifying you have the right to submit the code. See glossary.") certification problem.
+*In this report:* it's the headline recommendation — modeled on non-authorial kernel credit trailers, so it records the AI's help without triggering the [DCO](#dco "Developer Certificate of Origin — a per-commit sign-off certifying you have the right to submit the code.") certification problem.
 
 Primary source: <https://docs.kernel.org/process/coding-assistants.html>
 
@@ -90,9 +90,9 @@ Primary source: <https://docs.kernel.org/process/coding-assistants.html>
 
 ### Generated-by
 
-A commit trailer recording that AI produced substantial or whole chunks of the change — a [provenance](#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs. See glossary.") label, not an author claim.
+A commit trailer recording that AI produced substantial or whole chunks of the change — a [provenance](#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs.") label, not an author claim.
 
-*In this report:* it's the recommended escalation from [Assisted-by](#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author. See glossary.") for heavier AI output; Apache recommends it and OpenInfra uses it for substantial AI help.
+*In this report:* it's the recommended escalation from [Assisted-by](#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author.") for heavier AI output; Apache recommends it and OpenInfra uses it for substantial AI help.
 
 Primary source: <https://www.apache.org/legal/generative-tooling.html>
 
@@ -108,7 +108,7 @@ The Linux kernel's standardized credit and review trailers — some carry a fact
 - **`Reported-by`** — credits whoever found and reported the bug the patch fixes (ask permission first if the report was private). Pure credit, no technical claim.
 - **`Suggested-by`** — credits whoever proposed the idea or approach behind the patch.
 
-*In this report:* [Assisted-by](#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author. See glossary.") is deliberately modeled on these non-authorial tags, which is why it records involvement without certifying anything the way [Signed-off-by](#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation. See glossary.") does.
+*In this report:* [Assisted-by](#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author.") is deliberately modeled on these non-authorial tags, which is why it records involvement without certifying anything the way [Signed-off-by](#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation.") does.
 
 Primary source: <https://docs.kernel.org/process/submitting-patches.html>
 
@@ -116,7 +116,7 @@ Primary source: <https://docs.kernel.org/process/submitting-patches.html>
 
 ### DCO App
 
-A Probot-based GitHub App that enforces the [DCO](#dco "Developer Certificate of Origin — a per-commit sign-off certifying you have the right to submit the code. See glossary.") by failing a pull request's status check unless every commit has a valid [Signed-off-by](#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation. See glossary.") line matching the commit author's email, blocking the PR otherwise.
+A Probot-based GitHub App that enforces the [DCO](#dco "Developer Certificate of Origin — a per-commit sign-off certifying you have the right to submit the code.") by failing a pull request's status check unless every commit has a valid [Signed-off-by](#signed-off-by "Commit trailer that, in DCO projects, certifies you may submit the code — a human legal attestation.") line matching the commit author's email, blocking the PR otherwise.
 
 *In this report:* it mechanically ties sign-off to an accountable human account, so there's no path for an AI to satisfy the DCO check on its own behalf.
 
@@ -146,7 +146,7 @@ Primary source: <https://slsa.dev/spec/v1.0/provenance>
 
 ### SLSA
 
-Supply-chain Levels for Software Artifacts — an OpenSSF framework of graded security levels and signed build-[provenance](#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs. See glossary.") attestations describing how an artifact was produced.
+Supply-chain Levels for Software Artifacts — an OpenSSF framework of graded security levels and signed build-[provenance](#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs.") attestations describing how an artifact was produced.
 
 *In this report:* it's the provenance framework a machine-readable AI-tool trailer naturally feeds, unlike a human co-author line.
 
@@ -156,27 +156,17 @@ Primary source: <https://slsa.dev/spec/v1.0/>
 
 ### SBOM
 
-Software Bill of Materials — a formal, machine-readable inventory of the components and [provenance](#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs. See glossary.") that make up a piece of software.
+Software Bill of Materials — a formal, machine-readable inventory of the components and [provenance](#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs.") that make up a piece of software.
 
-*In this report:* it argues a parseable [Assisted-by](#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author. See glossary.")/[Generated-by](#generated-by "Provenance trailer noting AI produced substantial or whole parts of the change. See glossary.") trailer is better SBOM-style provenance than a fake AI co-author line.
+*In this report:* it argues a parseable [Assisted-by](#assisted-by "Non-authorial trailer crediting an AI as a helper, while the human stays sole author.")/[Generated-by](#generated-by "Provenance trailer noting AI produced substantial or whole parts of the change.") trailer is better SBOM-style provenance than a fake AI co-author line.
 
 Primary source: <https://www.cisa.gov/resources-tools/resources/2025-minimum-elements-software-bill-materials-sbom>
 
 ---
 
-### AI slop
-
-Low-quality, unverified AI-generated content submitted as if it were genuine work — for example, hallucinated bug-bounty reports that waste maintainers' time.
-
-*In this report:* it's curl's term for the undisclosed, unverified AI submissions that drove its bug-bounty shutdown, anchoring the 'disclose, don't hide' argument.
-
-Primary source: <https://daniel.haxx.se/blog/2025/07/14/death-by-a-thousand-slops/>
-
----
-
 ### tainted code
 
-Code of uncertain or encumbered copyright/license origin that a project treats as unsafe to include until its [provenance](#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs. See glossary.") is cleared; NetBSD presumes LLM-generated code to be tainted.
+Code of uncertain or encumbered copyright/license origin that a project treats as unsafe to include until its [provenance](#software-provenance "Software provenance — where and how software was produced, recorded in build attestations and SBOMs.") is cleared; NetBSD presumes LLM-generated code to be tainted.
 
 *In this report:* it's NetBSD's framing that treats AI output as a licensing-hygiene hazard rather than an authorship question.
 
@@ -206,7 +196,7 @@ Primary source: <https://www.copyright.gov/ai/>
 
 ### Thaler v. Perlmutter
 
-A D.C. Circuit case (decided 2025; [cert. denied](#certiorari "Certiorari — the Supreme Court's discretionary review; 'cert. denied' leaves the lower ruling standing. See glossary.") 2026) holding that the Copyright Act requires a work to be authored in the first instance by a human being, so a machine cannot be an author.
+A D.C. Circuit case (decided 2025; [cert. denied](#certiorari "Certiorari — the Supreme Court's discretionary review; 'cert. denied' leaves the lower ruling standing.") 2026) holding that the Copyright Act requires a work to be authored in the first instance by a human being, so a machine cannot be an author.
 
 *In this report:* it's the controlling court decision behind the 'no legal AI author to co-attribute' conclusion.
 
@@ -218,7 +208,7 @@ Primary source: <https://media.cadc.uscourts.gov/opinions/docs/2025/03/23-5233.p
 
 Certiorari is the Supreme Court's discretionary agreement to hear an appeal; 'cert. denied' means the Court declined, leaving the lower court's ruling as controlling law.
 
-*In this report:* the Supreme Court denied cert in [Thaler](#thaler-v-perlmutter "Thaler v. Perlmutter — court ruling that a copyrightable work must be authored by a human. See glossary.") (March 2026), which is what makes the human-authorship holding stick.
+*In this report:* the Supreme Court denied cert in [Thaler](#thaler-v-perlmutter "Thaler v. Perlmutter — court ruling that a copyrightable work must be authored by a human.") (March 2026), which is what makes the human-authorship holding stick.
 
 Primary source: <https://www.supremecourt.gov/docket/docket.aspx>
 
